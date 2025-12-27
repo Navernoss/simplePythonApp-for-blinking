@@ -7,7 +7,9 @@ def blink ():
     playsound('./blink.mp3')
     toast('Blink', audio={'silent': 'true'}, duration='short')
     print("Blink please " + time.ctime(time.time()))
-    time.sleep(100)
+    time.sleep(500)
     blink()
 
 blink()
+
+time.sleep(5)
