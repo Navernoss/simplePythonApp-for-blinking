@@ -3,16 +3,29 @@ import time
 import asyncio
 from win11toast import toast
 
-def blink (intv):
+def blinkwithnotif (intv):
     playsound('./blink.mp3')
     toast('Blink', audio={'silent': 'true'}, duration='short')
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv)
-    blink(intv)
+    blinkwithnotif(intv)
+
+def blinkwithoutnotif (intv):
+    playsound('./blink.mp3')
+    print("Blink please " + time.ctime(time.time()))
+    time.sleep(intv)
+    blinkwithoutnotif(intv)
 
 print('Hello! It\'s programm for blinking\n')
 
-intv = int(input("Enter interval: "))
-blink(intv)
+intv = int(input("Enter interval: ")) * 60
+choice = input("Do u want to have notification? Y/N")
+
+if choice == "Y" or choice != "N" :
+    if choice == "Y":
+        blinkwithnotif()
+    if choice == "N":
+        blinkwithoutnotif()
+
 
 time.sleep(5)
