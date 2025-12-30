@@ -19,13 +19,13 @@ def blinkwithoutnotif (intv):
 print('Hello! It\'s programm for blinking\n')
 
 intv = int(input("Enter interval: ")) * 60
-choice = input("Do u want to have notification? Y/N")
+choice = input("Do u want to have notification? (Y/N): ")
 
-if choice == "Y" or choice != "N" :
-    if choice == "Y":
-        blinkwithnotif()
-    if choice == "N":
-        blinkwithoutnotif()
+if choice == "Y" or choice == "N" or choice == "n" or choice == "y":
+    if choice == "Y" or choice == "y":
+        blinkwithnotif(intv)
+    if choice == "N" or choice == "n":
+        blinkwithoutnotif(intv)
 
 
 time.sleep(5)
