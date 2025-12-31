@@ -16,19 +16,37 @@ def blinkwithoutnotif (intv):
     time.sleep(intv)
     blinkwithoutnotif(intv)
 
-print('Welcome to Blink Reminder!\n')
 
-intv = int(input(" Enter interval (in minutes):")) * 60
-choice = input("Do you want notifications? (Y/N): ")
+def choiceMin():
+    intv = input("Enter interval (in minutes): ") * 60
+    if intv.isnumeric():
+        return intv
+    else:
+        print("Your symbol isn't digit")
+        choiceMin()
 
-if choice.isnumeric() != True:
-    if choice == "Y" or choice == "N" or choice == "n" or choice == "y":
-        if choice == "Y" or choice == "y":
-            blinkwithnotif(intv)
-        if choice == "N" or choice == "n":
-            blinkwithoutnotif(intv)
-else: 
-    print("Your symbol isn't digit")
+def choiceNot(intv):
+    choice = input("Do you want notifications? (Y/N): ")
 
+    if choice.isnumeric() != True:
+        if choice == "Y" or choice == "N" or choice == "n" or choice == "y":
+            if choice == "Y" or choice == "y":
+                blinkwithnotif(intv)
+            if choice == "N" or choice == "n":
+                blinkwithoutnotif(intv)
+        else:
+            print("Your symbol isn't right\n")
+            choiceNot(intv)
+    else: 
+        print("Your symbol isn't right\n")
+        choiceNot(intv)
 
-time.sleep(5)
+def main():
+    print('Welcome to Blink Reminder!\n')
+    intv = choiceMin()
+    print('We will reminder you to blink every ' + intv + " minutes!\n")
+    choiceNot(intv)
+    
+    
+
+main()
