@@ -7,20 +7,20 @@ def blinkwithnotif (intv):
     playsound('./blink.mp3')
     toast('Blink', audio={'silent': 'true'}, duration='short')
     print("Blink please " + time.ctime(time.time()))
-    time.sleep(intv)
+    time.sleep(intv * 60)
     blinkwithnotif(intv)
 
 def blinkwithoutnotif (intv):
     playsound('./blink.mp3')
     print("Blink please " + time.ctime(time.time()))
-    time.sleep(intv)
+    time.sleep(intv * 60)
     blinkwithoutnotif(intv)
 
 
 def choiceMin():
-    intv = input("Enter interval (in minutes): ") * 60
+    intv = input("Enter interval (in minutes): ")
     if intv.isnumeric():
-        return intv
+        return int(intv)
     else:
         print("Your symbol isn't digit")
         choiceMin()
@@ -44,7 +44,7 @@ def choiceNot(intv):
 def main():
     print('Welcome to Blink Reminder!\n')
     intv = choiceMin()
-    print('We will reminder you to blink every ' + intv + " minutes!\n")
+    print(f'We will reminder you to blink every ' + str(intv) + " minutes!\n")
     choiceNot(intv)
     
     
