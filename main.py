@@ -7,14 +7,14 @@ def empty_func(args):
     pass
 
 def blinkwithnotif (intv):
-    playsound('./blink.mp3')
+    playsound('https://friendly-hedgehog-352.convex.cloud/api/storage/80e89801-30ac-45ba-9ad0-b0541b794563')
     toast('Blink', on_dismissed=empty_func, audio={'silent': 'true'})
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv * 60)
     blinkwithnotif(intv)
 
 def blinkwithoutnotif (intv):
-    playsound('./blink.mp3')
+    playsound('https://friendly-hedgehog-352.convex.cloud/api/storage/80e89801-30ac-45ba-9ad0-b0541b794563')
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv * 60)
     blinkwithoutnotif(intv)
@@ -53,3 +53,4 @@ def main():
     
 
 main()
+input()

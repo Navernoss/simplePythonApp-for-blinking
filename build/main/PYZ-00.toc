@@ -1,4 +1,4 @@
-('D:\\simplePythonApp-for-blinking\\build\\main\\PYZ-00.pyz',
+('C:\\Users\\sudo\\OneDrive\\Документы\\simplePythonApp-for-blinking\\build\\main\\PYZ-00.pyz',
  [('__future__',
    'C:\\Users\\sudo\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\__future__.py',
    'PYMODULE'),

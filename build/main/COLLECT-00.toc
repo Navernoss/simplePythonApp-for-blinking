@@ -1,5 +1,5 @@
 ([('main.exe',
-   'D:\\simplePythonApp-for-blinking\\build\\main\\main.exe',
+   'C:\\Users\\sudo\\OneDrive\\Документы\\simplePythonApp-for-blinking\\build\\main\\main.exe',
    'EXECUTABLE'),
   ('python314.dll',
    'C:\\Users\\sudo\\AppData\\Local\\Python\\pythoncore-3.14-64\\python314.dll',
@@ -137,5 +137,5 @@
    'C:\\Users\\sudo\\OneDrive\\Документы\\simplePythonApp-for-blinking\\venv\\Lib\\site-packages\\Pythonwin\\mfc140u.dll',
    'BINARY'),
   ('base_library.zip',
-   'D:\\simplePythonApp-for-blinking\\build\\main\\base_library.zip',
+   'C:\\Users\\sudo\\OneDrive\\Документы\\simplePythonApp-for-blinking\\build\\main\\base_library.zip',
    'DATA')],)
