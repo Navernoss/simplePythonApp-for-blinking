@@ -3,9 +3,12 @@ import time
 import asyncio
 from win11toast import toast
 
+def empty_func(args):
+    pass
+
 def blinkwithnotif (intv):
     playsound('./blink.mp3')
-    toast('Blink', audio={'silent': 'true'}, duration='short')
+    toast('Blink', on_dismissed=empty_func, audio={'silent': 'true'})
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv * 60)
     blinkwithnotif(intv)
