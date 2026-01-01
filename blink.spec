@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('blink.mp3', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

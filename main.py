@@ -1,20 +1,24 @@
-from playsound3 import playsound
 import time
 import asyncio
 from win11toast import toast
+import winsound
+import os
+from playsound3 import playsound
 
 def empty_func(args):
     pass
 
+file_path = os.path.join(os.path.dirname(__file__), 'blink.mp3')
+
 def blinkwithnotif (intv):
-    playsound('https://friendly-hedgehog-352.convex.cloud/api/storage/80e89801-30ac-45ba-9ad0-b0541b794563')
+    playsound(file_path)
     toast('Blink', on_dismissed=empty_func, audio={'silent': 'true'})
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv * 60)
     blinkwithnotif(intv)
 
 def blinkwithoutnotif (intv):
-    playsound('https://friendly-hedgehog-352.convex.cloud/api/storage/80e89801-30ac-45ba-9ad0-b0541b794563')
+    playsound(file_path)
     print("Blink please " + time.ctime(time.time()))
     time.sleep(intv * 60)
     blinkwithoutnotif(intv)
