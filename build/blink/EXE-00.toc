@@ -217,7 +217,7 @@
  [],
  False,
  False,
- 1767290455,
+ 1767329543,
  [('run.exe',
    'C:\\Users\\sudo\\OneDrive\\Документы\\simplePythonApp-for-blinking\\venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')],

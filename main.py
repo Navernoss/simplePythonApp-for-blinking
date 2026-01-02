@@ -12,14 +12,14 @@ file_path = os.path.join(os.path.dirname(__file__), 'blink.mp3')
 
 def blinkwithnotif (intv):
     playsound(file_path)
-    toast('Blink', on_dismissed=empty_func, audio={'silent': 'true'})
-    print("Blink please " + time.ctime(time.time()))
+    toast('Blink', on_dismissed=empty_func, audio={'silent': 'true'}, on_click="Don't touch this toast notification")
+    print(f"Blink please (Now: {time.ctime(time.time())})")
     time.sleep(intv * 60)
     blinkwithnotif(intv)
 
 def blinkwithoutnotif (intv):
     playsound(file_path)
-    print("Blink please " + time.ctime(time.time()))
+    print(f"Blink please (Now: {time.ctime(time.time())})")
     time.sleep(intv * 60)
     blinkwithoutnotif(intv)
 
@@ -55,6 +55,8 @@ def main():
     choiceNot(intv)
     
     
-
-main()
-input()
+try:
+    main()
+    input()
+except KeyboardInterrupt:
+    print("\nWork was stopped. Goodbye)")
